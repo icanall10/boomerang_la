@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCS44kFmHPI8eo36G6nWOb1gKZMAyQEc8I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>693297011060</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>icanall.boomerang</string>
+	<key>PROJECT_ID</key>
+	<string>boomerang-18f3b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>boomerang-18f3b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:693297011060:ios:ce2eff8ca0ade1ea2cf421</string>
+</dict>
+</plist>

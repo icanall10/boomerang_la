@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "329929959346",
+    "project_id": "empating-a2d7e",
+    "storage_bucket": "empating-a2d7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329929959346:android:4525e91905f830f6ab26ab",
+        "android_client_info": {
+          "package_name": "icanall.boomerang"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3CDqEza1f0Hgwvm1LVuPZQeRZTRmDnjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
