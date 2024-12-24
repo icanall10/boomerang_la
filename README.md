@@ -1,4 +1,4 @@
-# To test notifications, you need to connect a firebase project
+# Run
 
 - firebase login
 - flutterfire configure
