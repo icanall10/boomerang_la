@@ -50,19 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: '',
-    appId: '',
-    messagingSenderId: '329929959346',
-    projectId: 'empating-a2d7e',
-    storageBucket: 'empating-a2d7e.appspot.com',
+    apiKey: 'AIzaSyCqNYCru59NJ702nUrEvSeKAX6g_uRoUmA',
+    appId: '1:897873467732:android:a8c3dce765b9a6322f10c1',
+    messagingSenderId: '897873467732',
+    projectId: 'push-notification-projec-86b3a',
+    storageBucket: 'push-notification-projec-86b3a.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: '',
-    appId: '',
-    messagingSenderId: '329929959346',
-    projectId: 'empating-a2d7e',
-    storageBucket: 'empating-a2d7e.appspot.com',
+    apiKey: 'AIzaSyA0-tKqtuMEs7fsCusrIB45H_bUXCXDTE0',
+    appId: '1:897873467732:ios:ee7257c8a4d7a6452f10c1',
+    messagingSenderId: '897873467732',
+    projectId: 'push-notification-projec-86b3a',
+    storageBucket: 'push-notification-projec-86b3a.firebasestorage.app',
     iosBundleId: 'icanall.boomerang',
   );
+
 }

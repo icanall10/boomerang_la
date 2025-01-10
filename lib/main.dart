@@ -6,6 +6,7 @@ import 'get-it.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   initGetIt();
 
   FCM.instance().init();

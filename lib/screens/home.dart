@@ -1,3 +1,4 @@
+import 'package:boomerang/classes/fcm.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -10,8 +11,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Home screen'),
+    return SafeArea(
+      child: Column(
+        children: [
+          ElevatedButton(onPressed: () {
+            showForegroundNotification({'fio': "Жмышенко Валерий Альбертович"});
+          }, child: Text("Start"))
+        ],
+      ),
     );
   }
 }
