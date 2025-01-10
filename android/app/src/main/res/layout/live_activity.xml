@@ -14,6 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Доброе дело"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -29,22 +30,33 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="@drawable/accept_button_background"
+            android:gravity="center"
             android:padding="10dp">
 
-            <TextView
-                android:id="@+id/timerTextView"
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="00:00 сек"
-                android:textSize="16sp"
-                android:layout_weight="0.3"
-                android:layout_marginEnd="8dp"/>
+                android:layout_weight="0.35"
+                android:layout_height="wrap_content">
+                <Chronometer
+                    android:id="@+id/chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:format="%s"
+                    android:paddingHorizontal="8.dp"
+                    android:paddingVertical="4.dp"
+                    android:background="@drawable/timer_border"
+
+                    android:layout_marginEnd="8dp"/>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/descriptionTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="Принять"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 android:layout_marginEnd="8dp"/>
 
@@ -53,7 +65,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
-                android:gravity="right"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:text="100р"
                 android:textSize="16sp"/>
         </LinearLayout>

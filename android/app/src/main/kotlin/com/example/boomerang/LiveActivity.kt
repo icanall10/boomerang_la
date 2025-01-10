@@ -7,8 +7,8 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
+import android.os.SystemClock
 import android.widget.RemoteViews
-
 
 class LiveActivity : Service() {
     private val CHANNEL_ID = "ForegroundServiceChannel"
@@ -19,17 +19,35 @@ class LiveActivity : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        val fio = intent!!.getStringExtra("fio").toString()
-        val message = intent.getStringExtra("message").toString()
-        val timerSeconds = intent.getStringExtra("timerSeconds").toString()
-        val price = intent.getStringExtra("price").toString()
+        val fio = intent?.getStringExtra("fio").orEmpty()
+        val message = intent?.getStringExtra("message").orEmpty()
+        val timerSeconds = intent?.getIntExtra("timerSeconds", 60)
+        val price = intent?.getStringExtra("price").orEmpty()
 
         val notificationIntent = Intent(this, MainActivity::class.java)
-        val pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent = PendingIntent.getActivity(
+            this,
+            0,
+            notificationIntent,
+            PendingIntent.FLAG_IMMUTABLE
+        )
 
-        val remoteView = RemoteViews(packageName, R.layout.live_activity)
-        remoteView.setTextViewText(R.id.title, fio)
-        remoteView.setTextViewText(R.id.message, message)
+        val remoteView = RemoteViews(packageName, R.layout.live_activity).apply {
+            setTextViewText(R.id.title, fio)
+            setTextViewText(R.id.message, message)
+            setTextViewText(R.id.priceTextView, price)
+        }
+
+        val countdownTimeMs = timerSeconds!! * 1000L
+        val baseTime = SystemClock.elapsedRealtime() + countdownTimeMs
+
+        remoteView.setChronometer(
+            R.id.chronometer,
+            baseTime,
+            null,
+            true
+        )
+        remoteView.setBoolean(R.id.chronometer, "setCountDown", true)
 
         val notification: Notification = Notification.Builder(this, CHANNEL_ID)
             .setContentTitle(fio)
@@ -53,9 +71,7 @@ class LiveActivity : Service() {
             "Foreground Service Channel",
             NotificationManager.IMPORTANCE_DEFAULT
         )
-
         val manager = getSystemService(NotificationManager::class.java)
         manager?.createNotificationChannel(serviceChannel)
     }
-
 }
