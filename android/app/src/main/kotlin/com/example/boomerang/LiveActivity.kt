@@ -24,6 +24,7 @@ class LiveActivity : Service() {
         val timerSeconds = intent?.getIntExtra("timerSeconds", 60)
         val price = intent?.getStringExtra("price").orEmpty()
 
+
         val notificationIntent = Intent(this, MainActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(
             this,
@@ -31,13 +32,14 @@ class LiveActivity : Service() {
             notificationIntent,
             PendingIntent.FLAG_IMMUTABLE
         )
-
         val remoteView = RemoteViews(packageName, R.layout.live_activity).apply {
             setTextViewText(R.id.title, fio)
             setTextViewText(R.id.message, message)
             setTextViewText(R.id.priceTextView, price)
         }
-
+        val remoteViewSmallContent = RemoteViews(packageName, R.layout.liva_activity_small_content).apply {
+            setTextViewText(R.id.message, message)
+        }
         val countdownTimeMs = timerSeconds!! * 1000L
         val baseTime = SystemClock.elapsedRealtime() + countdownTimeMs
 
@@ -47,13 +49,19 @@ class LiveActivity : Service() {
             null,
             true
         )
+        remoteViewSmallContent.setChronometer(
+            R.id.chronometerSmall,
+            baseTime,
+            null,
+            true
+        )
         remoteView.setBoolean(R.id.chronometer, "setCountDown", true)
+        remoteViewSmallContent.setBoolean(R.id.chronometerSmall, "setCountDown", true)
 
         val notification: Notification = Notification.Builder(this, CHANNEL_ID)
-            .setContentTitle(fio)
-            .setContentText(message)
             .setSmallIcon(R.mipmap.ic_launcher)
             .setContentIntent(pendingIntent)
+            .setCustomContentView(remoteViewSmallContent)
             .setCustomBigContentView(remoteView)
             .build()
 
