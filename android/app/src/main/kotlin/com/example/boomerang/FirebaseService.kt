@@ -8,6 +8,8 @@ import com.google.firebase.messaging.RemoteMessage
 class FirebaseService : FirebaseMessagingService() {
 
     override fun onMessageReceived(message: RemoteMessage) {
+        val soundServiceIntent = Intent(this, SoundService::class.java)
+        startService(soundServiceIntent)
         startForegroundService(message)
     }
 
