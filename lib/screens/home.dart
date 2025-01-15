@@ -14,9 +14,19 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Column(
         children: [
-          ElevatedButton(onPressed: () {
-            showForegroundNotification({'fio': "Жмышенко Валерий Альбертович"});
-          }, child: Text("Start"))
+          ElevatedButton(
+              onPressed: () {
+                showForegroundNotification(
+                  {
+                    "fio": "Иванов Иван Иванович",
+                    "message": "Хочу играть на Гитаре, нет возможности ее приобрести. Помогите плиз",
+                    "timerSeconds": "60",
+                    "price": "100",
+                    "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZwLSGn1si2nIBHPkLh8BhfCYQtwvcE0q0Sg&s"
+                  },
+                );
+              },
+              child: Text("Start"))
         ],
       ),
     );

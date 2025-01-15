@@ -126,17 +126,17 @@ void onDidReceiveLocalNotification(int id, String? title, String? body, String? 
 
 @pragma('vm:entry-point')
 Future<void> showForegroundNotification(Map<String, dynamic> data) async {
-  // Разбираете data и вытаскиваете нужные вам поля
   final fio = data['fio'] ?? 'Неизвестно';
   final message = data['message'] ?? 'Нет сообщения';
   final timerSeconds = int.tryParse(data['timer_seconds'] ?? '60') ?? 60;
   final price = data['price'] ?? '0';
+  final avatarUrl = data['avatarUrl'] ?? '0';
 
-  // Запускаем сервис
   await ForegroundServiceHelper.startForegroundService(
     fio: fio,
     message: message,
     timerSeconds: timerSeconds,
     price: price,
+    avatarUrl: avatarUrl
   );
 }

@@ -18,6 +18,7 @@ class FirebaseService : FirebaseMessagingService() {
             putExtra("message", data["message"] ?: "-")
             putExtra("timerSeconds", data["timerSeconds"] ?: "-")
             putExtra("price", data["price"] ?: "-")
+            putExtra("avatarUrl", data["avatarUrl"])
         }
         startForegroundService(intent)
     }

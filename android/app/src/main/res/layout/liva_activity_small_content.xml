@@ -11,6 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="100"
@@ -20,6 +21,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal">
                     <TextView
                         android:layout_width="wrap_content"
@@ -27,14 +29,26 @@
                         android:textColor="@color/black"
                         android:layout_marginEnd="5.dp"
                         android:text="ЭМПАТИНГ"/>
-                    <Chronometer
-                        android:id="@+id/chronometerSmall"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:paddingHorizontal="8.dp"
-                        android:format="%s"
                         android:paddingVertical="4.dp"
-                        android:background="@drawable/timer_border"/>
+                        android:background="@drawable/timer_border">
+                        <Chronometer
+                            android:id="@+id/chronometerSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="4.dp"
+                            android:format="%s"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="сек"/>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <TextView

@@ -9,6 +9,7 @@ class ForegroundServiceHelper {
     required String message,
     required int timerSeconds,
     required String price,
+    required String avatarUrl
   }) async {
     try {
       await _channel.invokeMethod('startForegroundService', {
@@ -16,6 +17,7 @@ class ForegroundServiceHelper {
         'message': message,
         'timerSeconds': timerSeconds,
         'price': price,
+        'avatarUrl': avatarUrl
       });
     } on PlatformException catch (e) {
       print("Ошибка запуска: '${e.message}'.");

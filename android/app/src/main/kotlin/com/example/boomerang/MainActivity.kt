@@ -18,8 +18,9 @@ class MainActivity: FlutterActivity() {
                     val message = call.argument<String>("message") ?: "NoMessage"
                     val timerSeconds = call.argument<Int>("timerSeconds") ?: 60
                     val price = call.argument<String>("price") ?: "0"
+                    val avatarUrl = call.argument<String>("avatarUrl").orEmpty()
 
-                    startMyForegroundService(fio, message, timerSeconds, price)
+                    startMyForegroundService(fio, message, timerSeconds, price, avatarUrl)
                     result.success(null)
                 }
                 "stopForegroundService" -> {
@@ -37,13 +38,15 @@ class MainActivity: FlutterActivity() {
         fio: String,
         message: String,
         timerSeconds: Int,
-        price: String
+        price: String,
+        avatarUrl: String
     ) {
         val intent = Intent(this, LiveActivity::class.java).apply {
             putExtra("fio", fio)
             putExtra("message", message)
             putExtra("timerSeconds", timerSeconds)
             putExtra("price", price)
+            putExtra("avatarUrl", avatarUrl)
         }
         startForegroundService(intent)
     }
