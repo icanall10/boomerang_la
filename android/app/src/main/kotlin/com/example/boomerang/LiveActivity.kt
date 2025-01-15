@@ -8,6 +8,7 @@ import android.app.Service
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffXfermode
@@ -16,9 +17,11 @@ import android.graphics.RectF
 import android.net.Uri
 import android.os.IBinder
 import android.os.SystemClock
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.widget.RemoteViews
 import com.bumptech.glide.Glide
-import com.example.boomerang.utils.toUri
 import java.util.concurrent.ExecutionException
 
 class LiveActivity : Service() {
@@ -45,12 +48,25 @@ class LiveActivity : Service() {
         )
 
         val remoteView = RemoteViews(packageName, R.layout.live_activity).apply {
+            val text = "*За пропуск доната вы потеряете -4"
+            val spannable = SpannableString(text)
+            val startIndex = text.indexOf("-4")
+            val endIndex = startIndex + 2
+
+            spannable.setSpan(
+                ForegroundColorSpan(Color.RED), // Цвет текста
+                startIndex,                     // Начало выделения
+                endIndex,                       // Конец выделения
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+
             setTextViewText(R.id.title, fio)
             setTextViewText(R.id.message, message)
+            setTextViewText(R.id.skipDonatAlert, spannable)
             setTextViewText(R.id.priceTextView, "$price₽")
         }
 
-        val remoteViewSmallContent = RemoteViews(packageName, R.layout.liva_activity_small_content).apply {
+        val remoteViewSmallContent = RemoteViews(packageName, R.layout.live_activity_small_content).apply {
             setTextViewText(R.id.message, message)
         }
 
