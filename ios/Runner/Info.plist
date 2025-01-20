@@ -22,6 +22,12 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
+	<key>UIBackgroundModes</key>
+	<array>
+	<string>remote-notification</string>
+	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -77,5 +83,11 @@
     <string>Will not be used</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>Will not be used</string>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>NSSupportsLiveActivities</key>
+	<true/>
 </dict>
 </plist>
