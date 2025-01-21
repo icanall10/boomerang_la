@@ -24,6 +24,16 @@
 		E731AF292D3F760100F9B284 /* Empating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E731AF282D3F760100F9B284 /* Empating.swift */; };
 		E731AF2B2D3F760300F9B284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E731AF2A2D3F760300F9B284 /* Assets.xcassets */; };
 		E731AF2F2D3F760300F9B284 /* EmpatingExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E731AF1E2D3F760100F9B284 /* EmpatingExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E731AF4E2D3FD9DD00F9B284 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E731AF4D2D3FD9DD00F9B284 /* NotificationService.swift */; };
+		E731AF522D3FD9DD00F9B284 /* EmpatingNotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E731AF4B2D3FD9DC00F9B284 /* EmpatingNotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E731AF602D3FE09E00F9B284 /* LiveActivityModule.docc in Sources */ = {isa = PBXBuildFile; fileRef = E731AF5F2D3FE09E00F9B284 /* LiveActivityModule.docc */; };
+		E731AF662D3FE09E00F9B284 /* LiveActivityModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E731AF5C2D3FE09E00F9B284 /* LiveActivityModule.framework */; };
+		E731AF6D2D3FE09F00F9B284 /* LiveActivityModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E731AF6C2D3FE09F00F9B284 /* LiveActivityModuleTests.swift */; };
+		E731AF6E2D3FE09F00F9B284 /* LiveActivityModule.h in Headers */ = {isa = PBXBuildFile; fileRef = E731AF5E2D3FE09E00F9B284 /* LiveActivityModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E731AF712D3FE09F00F9B284 /* LiveActivityModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E731AF5C2D3FE09E00F9B284 /* LiveActivityModule.framework */; };
+		E731AF722D3FE09F00F9B284 /* LiveActivityModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E731AF5C2D3FE09E00F9B284 /* LiveActivityModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E731AF7C2D3FE0D000F9B284 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E731AF7B2D3FE0D000F9B284 /* LiveActivityManager.swift */; };
+		E731AF802D3FE15800F9B284 /* EmpatingAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E731AF7F2D3FE15800F9B284 /* EmpatingAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +51,41 @@
 			remoteGlobalIDString = E731AF1D2D3F760100F9B284;
 			remoteInfo = EmpatingExtension;
 		};
+		E731AF502D3FD9DD00F9B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E731AF4A2D3FD9DC00F9B284;
+			remoteInfo = EmpatingNotificationService;
+		};
+		E731AF672D3FE09E00F9B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E731AF5B2D3FE09E00F9B284;
+			remoteInfo = LiveActivityModule;
+		};
+		E731AF692D3FE09F00F9B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97C146ED1CF9000F007C117D;
+			remoteInfo = Runner;
+		};
+		E731AF6F2D3FE09F00F9B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E731AF5B2D3FE09E00F9B284;
+			remoteInfo = LiveActivityModule;
+		};
+		E731AF7D2D3FE0F500F9B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E731AF5B2D3FE09E00F9B284;
+			remoteInfo = LiveActivityModule;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +95,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E731AF722D3FE09F00F9B284 /* LiveActivityModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +106,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				E731AF522D3FD9DD00F9B284 /* EmpatingNotificationService.appex in Embed Foundation Extensions */,
 				E731AF2F2D3F760300F9B284 /* EmpatingExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -99,6 +146,16 @@
 		E731AF282D3F760100F9B284 /* Empating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empating.swift; sourceTree = "<group>"; };
 		E731AF2A2D3F760300F9B284 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E731AF2C2D3F760300F9B284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E731AF4B2D3FD9DC00F9B284 /* EmpatingNotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmpatingNotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E731AF4D2D3FD9DD00F9B284 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		E731AF4F2D3FD9DD00F9B284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E731AF5C2D3FE09E00F9B284 /* LiveActivityModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LiveActivityModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E731AF5E2D3FE09E00F9B284 /* LiveActivityModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveActivityModule.h; sourceTree = "<group>"; };
+		E731AF5F2D3FE09E00F9B284 /* LiveActivityModule.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LiveActivityModule.docc; sourceTree = "<group>"; };
+		E731AF652D3FE09E00F9B284 /* LiveActivityModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveActivityModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E731AF6C2D3FE09F00F9B284 /* LiveActivityModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityModuleTests.swift; sourceTree = "<group>"; };
+		E731AF7B2D3FE0D000F9B284 /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
+		E731AF7F2D3FE15800F9B284 /* EmpatingAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpatingAttributes.swift; sourceTree = "<group>"; };
 		F358D2D0A2847C24E3530725 /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FBF1A956C84F34D1F04AC420 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E5A818A5B4D1334C7076CB /* Pods_Runner.framework in Frameworks */,
+				E731AF712D3FE09F00F9B284 /* LiveActivityModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +176,28 @@
 			files = (
 				E731AF222D3F760100F9B284 /* SwiftUI.framework in Frameworks */,
 				E731AF202D3F760100F9B284 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E731AF482D3FD9DC00F9B284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E731AF592D3FE09E00F9B284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E731AF622D3FE09E00F9B284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E731AF662D3FE09E00F9B284 /* LiveActivityModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +237,9 @@
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
 				E731AF232D3F760100F9B284 /* Empating */,
+				E731AF4C2D3FD9DD00F9B284 /* EmpatingNotificationService */,
+				E731AF5D2D3FE09E00F9B284 /* LiveActivityModule */,
+				E731AF6B2D3FE09F00F9B284 /* LiveActivityModuleTests */,
 				97C146EF1CF9000F007C117D /* Products */,
 				331C8082294A63A400263BE5 /* RunnerTests */,
 				D56E5E5951E39D19BF6D0A11 /* Pods */,
@@ -170,6 +253,9 @@
 				97C146EE1CF9000F007C117D /* Runner.app */,
 				331C8081294A63A400263BE5 /* RunnerTests.xctest */,
 				E731AF1E2D3F760100F9B284 /* EmpatingExtension.appex */,
+				E731AF4B2D3FD9DC00F9B284 /* EmpatingNotificationService.appex */,
+				E731AF5C2D3FE09E00F9B284 /* LiveActivityModule.framework */,
+				E731AF652D3FE09E00F9B284 /* LiveActivityModuleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,7 +313,46 @@
 			path = Empating;
 			sourceTree = "<group>";
 		};
+		E731AF4C2D3FD9DD00F9B284 /* EmpatingNotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				E731AF4D2D3FD9DD00F9B284 /* NotificationService.swift */,
+				E731AF4F2D3FD9DD00F9B284 /* Info.plist */,
+			);
+			path = EmpatingNotificationService;
+			sourceTree = "<group>";
+		};
+		E731AF5D2D3FE09E00F9B284 /* LiveActivityModule */ = {
+			isa = PBXGroup;
+			children = (
+				E731AF5E2D3FE09E00F9B284 /* LiveActivityModule.h */,
+				E731AF5F2D3FE09E00F9B284 /* LiveActivityModule.docc */,
+				E731AF7B2D3FE0D000F9B284 /* LiveActivityManager.swift */,
+				E731AF7F2D3FE15800F9B284 /* EmpatingAttributes.swift */,
+			);
+			path = LiveActivityModule;
+			sourceTree = "<group>";
+		};
+		E731AF6B2D3FE09F00F9B284 /* LiveActivityModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E731AF6C2D3FE09F00F9B284 /* LiveActivityModuleTests.swift */,
+			);
+			path = LiveActivityModuleTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E731AF572D3FE09E00F9B284 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E731AF6E2D3FE09F00F9B284 /* LiveActivityModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		331C8080294A63A400263BE5 /* RunnerTests */ = {
@@ -267,6 +392,8 @@
 			);
 			dependencies = (
 				E731AF2E2D3F760300F9B284 /* PBXTargetDependency */,
+				E731AF512D3FD9DD00F9B284 /* PBXTargetDependency */,
+				E731AF702D3FE09F00F9B284 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -290,6 +417,61 @@
 			productReference = E731AF1E2D3F760100F9B284 /* EmpatingExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		E731AF4A2D3FD9DC00F9B284 /* EmpatingNotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E731AF562D3FD9DD00F9B284 /* Build configuration list for PBXNativeTarget "EmpatingNotificationService" */;
+			buildPhases = (
+				E731AF472D3FD9DC00F9B284 /* Sources */,
+				E731AF482D3FD9DC00F9B284 /* Frameworks */,
+				E731AF492D3FD9DC00F9B284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E731AF7E2D3FE0F500F9B284 /* PBXTargetDependency */,
+			);
+			name = EmpatingNotificationService;
+			productName = EmpatingNotificationService;
+			productReference = E731AF4B2D3FD9DC00F9B284 /* EmpatingNotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E731AF5B2D3FE09E00F9B284 /* LiveActivityModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E731AF792D3FE09F00F9B284 /* Build configuration list for PBXNativeTarget "LiveActivityModule" */;
+			buildPhases = (
+				E731AF572D3FE09E00F9B284 /* Headers */,
+				E731AF582D3FE09E00F9B284 /* Sources */,
+				E731AF592D3FE09E00F9B284 /* Frameworks */,
+				E731AF5A2D3FE09E00F9B284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveActivityModule;
+			productName = LiveActivityModule;
+			productReference = E731AF5C2D3FE09E00F9B284 /* LiveActivityModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E731AF642D3FE09E00F9B284 /* LiveActivityModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E731AF7A2D3FE09F00F9B284 /* Build configuration list for PBXNativeTarget "LiveActivityModuleTests" */;
+			buildPhases = (
+				E731AF612D3FE09E00F9B284 /* Sources */,
+				E731AF622D3FE09E00F9B284 /* Frameworks */,
+				E731AF632D3FE09E00F9B284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E731AF682D3FE09E00F9B284 /* PBXTargetDependency */,
+				E731AF6A2D3FE09F00F9B284 /* PBXTargetDependency */,
+			);
+			name = LiveActivityModuleTests;
+			productName = LiveActivityModuleTests;
+			productReference = E731AF652D3FE09E00F9B284 /* LiveActivityModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,6 +494,16 @@
 					E731AF1D2D3F760100F9B284 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
+					E731AF4A2D3FD9DC00F9B284 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					E731AF5B2D3FE09E00F9B284 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					E731AF642D3FE09E00F9B284 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 97C146ED1CF9000F007C117D;
+					};
 				};
 			};
 			buildConfigurationList = 97C146E91CF9000F007C117D /* Build configuration list for PBXProject "Runner" */;
@@ -330,6 +522,9 @@
 				97C146ED1CF9000F007C117D /* Runner */,
 				331C8080294A63A400263BE5 /* RunnerTests */,
 				E731AF1D2D3F760100F9B284 /* EmpatingExtension */,
+				E731AF4A2D3FD9DC00F9B284 /* EmpatingNotificationService */,
+				E731AF5B2D3FE09E00F9B284 /* LiveActivityModule */,
+				E731AF642D3FE09E00F9B284 /* LiveActivityModuleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -358,6 +553,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				E731AF2B2D3F760300F9B284 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E731AF492D3FD9DC00F9B284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E731AF5A2D3FE09E00F9B284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E731AF632D3FE09E00F9B284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +703,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E731AF472D3FD9DC00F9B284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E731AF4E2D3FD9DD00F9B284 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E731AF582D3FE09E00F9B284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E731AF802D3FE15800F9B284 /* EmpatingAttributes.swift in Sources */,
+				E731AF7C2D3FE0D000F9B284 /* LiveActivityManager.swift in Sources */,
+				E731AF602D3FE09E00F9B284 /* LiveActivityModule.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E731AF612D3FE09E00F9B284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E731AF6D2D3FE09F00F9B284 /* LiveActivityModuleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -499,6 +741,31 @@
 			isa = PBXTargetDependency;
 			target = E731AF1D2D3F760100F9B284 /* EmpatingExtension */;
 			targetProxy = E731AF2D2D3F760300F9B284 /* PBXContainerItemProxy */;
+		};
+		E731AF512D3FD9DD00F9B284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E731AF4A2D3FD9DC00F9B284 /* EmpatingNotificationService */;
+			targetProxy = E731AF502D3FD9DD00F9B284 /* PBXContainerItemProxy */;
+		};
+		E731AF682D3FE09E00F9B284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E731AF5B2D3FE09E00F9B284 /* LiveActivityModule */;
+			targetProxy = E731AF672D3FE09E00F9B284 /* PBXContainerItemProxy */;
+		};
+		E731AF6A2D3FE09F00F9B284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97C146ED1CF9000F007C117D /* Runner */;
+			targetProxy = E731AF692D3FE09F00F9B284 /* PBXContainerItemProxy */;
+		};
+		E731AF702D3FE09F00F9B284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E731AF5B2D3FE09E00F9B284 /* LiveActivityModule */;
+			targetProxy = E731AF6F2D3FE09F00F9B284 /* PBXContainerItemProxy */;
+		};
+		E731AF7E2D3FE0F500F9B284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E731AF5B2D3FE09E00F9B284 /* LiveActivityModule */;
+			targetProxy = E731AF7D2D3FE0F500F9B284 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -919,6 +1186,321 @@
 			};
 			name = Profile;
 		};
+		E731AF532D3FD9DD00F9B284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M353TP685W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmpatingNotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EmpatingNotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = icanall.boomerang.EmpatingNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E731AF542D3FD9DD00F9B284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M353TP685W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmpatingNotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EmpatingNotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = icanall.boomerang.EmpatingNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E731AF552D3FD9DD00F9B284 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M353TP685W;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmpatingNotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EmpatingNotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = icanall.boomerang.EmpatingNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Profile;
+		};
+		E731AF732D3FE09F00F9B284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M353TP685W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Vladimir.LiveActivityModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E731AF742D3FE09F00F9B284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M353TP685W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Vladimir.LiveActivityModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E731AF752D3FE09F00F9B284 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M353TP685W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Vladimir.LiveActivityModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Profile;
+		};
+		E731AF762D3FE09F00F9B284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Vladimir.LiveActivityModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Runner";
+			};
+			name = Debug;
+		};
+		E731AF772D3FE09F00F9B284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Vladimir.LiveActivityModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Runner";
+			};
+			name = Release;
+		};
+		E731AF782D3FE09F00F9B284 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Vladimir.LiveActivityModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Runner";
+			};
+			name = Profile;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -958,6 +1540,36 @@
 				E731AF312D3F760300F9B284 /* Debug */,
 				E731AF322D3F760300F9B284 /* Release */,
 				E731AF332D3F760300F9B284 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E731AF562D3FD9DD00F9B284 /* Build configuration list for PBXNativeTarget "EmpatingNotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E731AF532D3FD9DD00F9B284 /* Debug */,
+				E731AF542D3FD9DD00F9B284 /* Release */,
+				E731AF552D3FD9DD00F9B284 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E731AF792D3FE09F00F9B284 /* Build configuration list for PBXNativeTarget "LiveActivityModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E731AF732D3FE09F00F9B284 /* Debug */,
+				E731AF742D3FE09F00F9B284 /* Release */,
+				E731AF752D3FE09F00F9B284 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E731AF7A2D3FE09F00F9B284 /* Build configuration list for PBXNativeTarget "LiveActivityModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E731AF762D3FE09F00F9B284 /* Debug */,
+				E731AF772D3FE09F00F9B284 /* Release */,
+				E731AF782D3FE09F00F9B284 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
