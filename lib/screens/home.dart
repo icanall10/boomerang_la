@@ -1,4 +1,5 @@
 import 'package:boomerang/classes/fcm.dart';
+import 'package:boomerang/classes/foreground_service_helper.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,20 +10,42 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  String label = "";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
         children: [
+          Text(label),
+          ElevatedButton(
+            onPressed: () async{
+              final result = await TestServiceHelper.getOne();
+              setState(() {
+                label = result ?? "";
+              });
+            },
+            child: const Text("1"),
+          ),
+          ElevatedButton(
+            onPressed: () async{
+              final result = await TestServiceHelper.getTwo();
+              setState(() {
+                label = result ?? "";
+              });
+            },
+            child: const Text("2"),
+          ),
           ElevatedButton(
               onPressed: () {
                 showForegroundNotification(
                   {
                     "fio": "Иванов Иван Иванович",
-                    "message": "Хочу играть на Гитаре, нет возможности ее приобрести. Помогите плиз",
+                    "message":
+                        "Хочу играть на Гитаре, нет возможности ее приобрести. Помогите плиз",
                     "timerSeconds": "60",
                     "price": "100",
-                    "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZwLSGn1si2nIBHPkLh8BhfCYQtwvcE0q0Sg&s"
+                    "avatarUrl":
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZwLSGn1si2nIBHPkLh8BhfCYQtwvcE0q0Sg&s"
                   },
                 );
               },

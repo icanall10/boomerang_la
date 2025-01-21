@@ -1,9 +1,11 @@
 import 'package:boomerang/classes/fcm.dart';
 import 'package:boomerang/screens/home.dart';
+import 'package:boomerang/screens/live_activity_sreen.dart';
 import 'package:flutter/material.dart';
 import 'package:boomerang/classes/nav.dart';
 import 'get-it.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -54,7 +56,7 @@ class Main extends StatelessWidget {
           body: child!,
         );
       },
-      home: const HomeScreen(),
+      home: const LiveActivityScreen(),
     );
   }
 }
