@@ -10,31 +10,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  String label = "";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
         children: [
-          Text(label),
-          ElevatedButton(
-            onPressed: () async{
-              final result = await TestServiceHelper.getOne();
-              setState(() {
-                label = result ?? "";
-              });
-            },
-            child: const Text("1"),
-          ),
-          ElevatedButton(
-            onPressed: () async{
-              final result = await TestServiceHelper.getTwo();
-              setState(() {
-                label = result ?? "";
-              });
-            },
-            child: const Text("2"),
-          ),
           ElevatedButton(
               onPressed: () {
                 showForegroundNotification(

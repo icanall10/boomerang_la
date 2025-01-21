@@ -19,7 +19,7 @@ import Flutter
         
         // Регистрируем метод-канал
         let controller = window?.rootViewController as! FlutterViewController
-        let channel = FlutterMethodChannel(name: "live_activity", binaryMessenger: controller.binaryMessenger)
+        let channel = FlutterMethodChannel(name: "foregroundChannel", binaryMessenger: controller.binaryMessenger)
         
         channel.setMethodCallHandler { [weak self] call, result in
             guard let self = self else { return }
@@ -31,11 +31,11 @@ import Flutter
             }
 
             switch call.method {
-            case "startActivity":
+            case "startForegroundService":
                 self.liveActivityManager?.startActivity(args: call.arguments as? [String: Any], result: result)
             case "acceptDobroeDelo":
                 self.liveActivityManager?.acceptDobroeDelo(args: call.arguments as? [String: Any], result: result)
-            case "endActivity":
+            case "stopForegroundService":
                 self.liveActivityManager?.endActivity(args: call.arguments as? [String: Any] ?? [:], result: result)
             default:
                 result(FlutterMethodNotImplemented)

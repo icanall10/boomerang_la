@@ -13,6 +13,10 @@ import Flutter
 
 struct TimerAttributes: ActivityAttributes {
     struct ContentState: Codable, Hashable {
+        let fio: String
+        let message: String
+        let avatarUrl: String
+        let price: String
         /// Сколько секунд осталось.
         var timeLeft: Int
         /// Принял ли пользователь «доброе дело».
@@ -26,8 +30,19 @@ class LiveActivityManager: NSObject {
     private var activity: Activity<TimerAttributes>?
 
     func startActivity(args: [String: Any]?, result: @escaping FlutterResult) {
+        guard let args = args else {
+                // Обработка случая, когда args равен nil
+                result(FlutterError(code: "INVALID_ARGS", message: "Arguments are nil", details: nil))
+                return
+            }
+        
+        let fio = args["fio"] as? String ?? "Неизвестно"
+        let message = args["message"] as? String ?? "Нет сообщения"
+        let timerSeconds = args["timerSeconds"] as? Int ?? 60
+        let price = args["price"] as? String ?? "0"
+        let avatarUrl = args["avatarUrl"] as? String ?? ""
         // Начальные значения
-        let initialContentState = TimerAttributes.ContentState(timeLeft: 40, isAccepted: false)
+        let initialContentState = TimerAttributes.ContentState(fio: fio, message: message, avatarUrl: avatarUrl, price: price, timeLeft: timerSeconds, isAccepted: false)
         let content = ActivityContent(state: initialContentState, staleDate: nil)
 
         do {
@@ -52,7 +67,7 @@ class LiveActivityManager: NSObject {
                         break
                     }
                     
-                    let newState = TimerAttributes.ContentState(timeLeft: second, isAccepted: false)
+                    let newState = TimerAttributes.ContentState(fio: currentState.fio, message: currentState.message, avatarUrl: currentState.avatarUrl, price: currentState.price, timeLeft: second, isAccepted: false)
                     let updatedContent = ActivityContent(state: newState, staleDate: nil)
                     await activity.update(updatedContent)
                 }
@@ -76,7 +91,7 @@ class LiveActivityManager: NSObject {
             // Узнаём текущее состояние
             let currentState = activity.content.state
             // Меняем isAccepted на true
-            let newState = TimerAttributes.ContentState(timeLeft: currentState.timeLeft, isAccepted: true)
+            let newState = TimerAttributes.ContentState(fio: currentState.fio, message: currentState.message, avatarUrl: currentState.avatarUrl, price: currentState.price, timeLeft: currentState.timeLeft, isAccepted: true)
             let updatedContent = ActivityContent(state: newState, staleDate: nil)
             await activity.update(updatedContent)
             result(nil)
