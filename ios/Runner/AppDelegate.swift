@@ -1,8 +1,6 @@
 import UIKit
 import Flutter
 
-import app_links
-
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
   override func application(
