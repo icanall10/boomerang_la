@@ -10,8 +10,6 @@ import ActivityKit
 import Flutter
 
 
-
-
 @available(iOS 16.1, *)
 public class LiveActivityManager: NSObject {
 

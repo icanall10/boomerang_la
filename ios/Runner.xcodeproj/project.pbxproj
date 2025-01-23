@@ -86,6 +86,13 @@
 			remoteGlobalIDString = E731AF5B2D3FE09E00F9B284;
 			remoteInfo = LiveActivityModule;
 		};
+		E731AF812D3FE36200F9B284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E731AF5B2D3FE09E00F9B284;
+			remoteInfo = LiveActivityModule;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -411,6 +418,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E731AF822D3FE36200F9B284 /* PBXTargetDependency */,
 			);
 			name = EmpatingExtension;
 			productName = EmpatingExtension;
@@ -766,6 +774,11 @@
 			isa = PBXTargetDependency;
 			target = E731AF5B2D3FE09E00F9B284 /* LiveActivityModule */;
 			targetProxy = E731AF7D2D3FE0F500F9B284 /* PBXContainerItemProxy */;
+		};
+		E731AF822D3FE36200F9B284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E731AF5B2D3FE09E00F9B284 /* LiveActivityModule */;
+			targetProxy = E731AF812D3FE36200F9B284 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

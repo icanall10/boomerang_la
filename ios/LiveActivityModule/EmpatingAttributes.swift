@@ -9,15 +9,15 @@ import Foundation
 import ActivityKit
 
 
-struct EmpatingAttributes: ActivityAttributes {
-    struct ContentState: Codable, Hashable {
-        let fio: String
-        let message: String
-        let avatarUrl: String
-        let price: String
+public struct EmpatingAttributes: ActivityAttributes {
+    public struct ContentState: Codable, Hashable {
+        public let fio: String
+        public let message: String
+        public let avatarUrl: String
+        public let price: String
         /// Сколько секунд осталось.
-        var timeLeft: Int
+        public var timeLeft: Int
         /// Принял ли пользователь «доброе дело».
-        var isAccepted: Bool
+        public var isAccepted: Bool
     }
 }

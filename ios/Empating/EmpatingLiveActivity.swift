@@ -7,36 +7,19 @@
 import ActivityKit
 import WidgetKit
 import SwiftUI
-
-
-struct EmpatingAttributes: ActivityAttributes {
-    struct ContentState: Codable, Hashable {
-        let fio: String
-        let message: String
-        let avatarUrl: String
-        let price: String
-        /// Сколько секунд осталось.
-        var timeLeft: Int
-        /// Принял ли пользователь «доброе дело».
-        var isAccepted: Bool
-    }
-}
+import LiveActivityModule
 
 @available(iOS 16.1, *)
 struct TimerLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: EmpatingAttributes.self) { context in
             
-            // Lock Screen / Banner view
             LockScreenView(context: context)
             
         } dynamicIsland: { context in
             
             DynamicIsland {
-                // Expanded (при долгом тапе)
                 DynamicIslandExpandedRegion(.leading) {
-                    // Вывод таймера (убывающий)
-                    // (iOS 16.2+ автоматически обновляет .timer)
                     Text("\(context.state.timeLeft) СЕК")
                         .font(.headline)
                         .foregroundColor(.red)
@@ -55,31 +38,26 @@ struct TimerLiveActivity: Widget {
                 }
                 
             } compactLeading: {
-                // Сжатое представление (слева)
-                Image("AppIcon") // Иконка приложения
+                Image("AppIcon")
             } compactTrailing: {
-                // Сжатое представление (справа)
                 Text(context.state.price)
             } minimal: {
-                // Минимальное представление
                 Image(systemName: "person.circle")
             }
         }
     }
 }
 
-/// Основная форма
 struct LockScreenView: View {
     let context: ActivityViewContext<EmpatingAttributes>
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             
-            // (1) Иконка приложения + "ЭМПАТИНГ", по центру
             HStack(spacing: 8) {
-                Image("AppIcon") // замените на реальное имя ассета
+                Image("AppIcon")
                     .resizable()
-                    .frame(width: 20, height: 20) // Размер иконки
+                    .frame(width: 20, height: 20)
                     .cornerRadius(4)
                 
                 Text("ЭМПАТИНГ")
@@ -125,9 +103,6 @@ struct LockScreenView: View {
                         .foregroundColor(.black)
                         .font(.caption)
                         .lineLimit(2)
-                    
-                    // (4) Надпись "* За пропуск доната вы потеряете -4м"
-                    // с красным "-4м"
                     HStack(spacing: 4) {
                         Text("* За пропуск доната вы потеряете")
                             .foregroundColor(.secondary)
@@ -205,8 +180,8 @@ extension Color {
 
 private func textWidth(_ timeLeft: Int) -> CGFloat {
     let text = "\(timeLeft) СЕК"
-    let font = UIFont.systemFont(ofSize: 17) // Use the same font size as SwiftUI text
+    let font = UIFont.systemFont(ofSize: 17)
     let attributes = [NSAttributedString.Key.font: font]
     let size = text.size(withAttributes: attributes)
-    return size.width + 16 // Add some padding
+    return size.width + 16
 }

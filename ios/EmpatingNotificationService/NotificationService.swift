@@ -6,23 +6,29 @@
 //
 
 import UserNotifications
+import LiveActivityModule
+import ActivityKit
 
 class NotificationService: UNNotificationServiceExtension {
 
     var contentHandler: ((UNNotificationContent) -> Void)?
     var bestAttemptContent: UNMutableNotificationContent?
+    var liveActivityManager: LiveActivityManager?
 
-    override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
-        self.contentHandler = contentHandler
-        bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
+    override func didReceive(
+      _ request: UNNotificationRequest,
+      withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void
+    ) {
+        let bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         
-        if let bestAttemptContent = bestAttemptContent {
-            // Modify the notification content here...
-            bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
+        if let userInfo = bestAttemptContent?.userInfo {
+            // 1. Извлечь нужные данные для Live Activity
+            let data = userInfo["my_live_activity_data"] as? [String: Any]
             
-            contentHandler(bestAttemptContent)
+            self.liveActivityManager?.startActivity(args: data, result: { _ in})
         }
     }
+
     
     override func serviceExtensionTimeWillExpire() {
         // Called just before the extension will be terminated by the system.

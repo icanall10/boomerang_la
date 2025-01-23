@@ -56,13 +56,12 @@ class FCM {
       ),
       onDidReceiveNotificationResponse: _onDidReceiveNotificationResponse,
     );
-    if(Platform.isAndroid){
-      final token = await FirebaseMessaging.instance.getToken();
-      print('---Your token for push test: $token');
-    }
+    final token = await FirebaseMessaging.instance.getToken();
+    print('---Your FCM token for push test: $token');
+
     if(Platform.isIOS){
-      final token = await FirebaseMessaging.instance.getAPNSToken();
-      print('---Your token for push test: $token');
+      final apnToken = await FirebaseMessaging.instance.getAPNSToken();
+      print('---Your APN token for push test: $apnToken');
     }
 
   }
