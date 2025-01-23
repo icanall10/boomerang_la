@@ -47,7 +47,7 @@ public class LiveActivityManager: NSObject {
             let activity = try Activity<EmpatingAttributes>.request(
                 attributes: EmpatingAttributes(),
                 content: content,
-                pushType: nil
+                pushType: .token
             )
             self.activity = activity
 

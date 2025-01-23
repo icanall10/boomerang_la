@@ -1,6 +1,7 @@
 import UIKit
 import Flutter
 
+@available(iOS 16.1, *)
 @main
 @objc class AppDelegate: FlutterAppDelegate {
     
@@ -50,13 +51,38 @@ import Flutter
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
-    override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
-        print("response")
+    
+    override func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print(userInfo)
         
-        if #available(iOS 16.1, *) {
-                    if let userInfo = response.notification.request.content.userInfo as? [String: Any] {
-                        liveActivityManager?.startActivity(args: userInfo, result: { _ in })
-                    }
-                }
+        Task {
+            liveActivityManager?.startActivity(args: userInfo as? [String : Any], result: { _ in })
+            completionHandler(.newData)
+        }
     }
+    
+    override func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                  willPresent notification: UNNotification) async
+        -> UNNotificationPresentationOptions {
+        let userInfo = notification.request.content.userInfo
+        print(userInfo)
+
+            liveActivityManager?.startActivity(args: userInfo as? [String : Any], result: { _ in })
+
+        return [[.alert, .sound]]
+      }
+
+    override func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                  didReceive response: UNNotificationResponse) async {
+        let userInfo = response.notification.request.content.userInfo
+
+        // ...
+
+        // With swizzling disabled you must let Messaging know about the message, for Analytics
+        // Messaging.messaging().appDidReceiveMessage(userInfo)
+
+        // Print full message.
+        print(userInfo)
+      }
+
 }
